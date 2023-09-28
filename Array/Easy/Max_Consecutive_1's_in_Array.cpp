@@ -19,13 +19,12 @@ int findMaxConsecutiveOnes(vector<int>& nums) {
     for (int i = 0; i < nums.size(); i++) {
         if (nums[i] == 1) { // If the current element is 1, increment the count
             count++;
-        } else { // If the current element is not 1, update max_occurance and reset count
-            max_occurance = max(max_occurance, count);
+        } else { // If the current element is not 1,  reset count
             count = 0; // Reset count to 0
         }
+		max_occurance = max(max_occurance, count); // update max_occurance
     }
 
-    max_occurance = max(max_occurance, count); // Handle the case where the sequence ends with consecutive ones
 
     return max_occurance;
 }
