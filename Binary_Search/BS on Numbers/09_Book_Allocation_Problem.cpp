@@ -63,3 +63,13 @@ int findPages(vector<int>& arr, int n, int m) {
 
     return ans; // Return the minimum number of pages
 }
+
+int main() {
+    // Example usage
+    vector<int> arr = {12, 34, 67, 90};
+    int n = arr.size();
+    int m = 2;
+    cout << "Minimum number of pages: " << findPages(arr, n, m) << std::endl;
+
+    return 0;
+}
